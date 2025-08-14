@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repertório Secreto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #f4d03f;
+        }
+        .hidden-content {
+            display: none;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+        }
+        button {
+            background-color: #f4d03f;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d4b03f;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔒 Repertório Protegido</h1>
+    <p>Insira a palavra-passe para aceder:</p>
+    <input type="password" id="senha" placeholder="Digite a senha">
+    <button onclick="verificarSenha()">Entrar</button>
+
+    <div class="hidden-content" id="conteudo">
+        <h2>🎵 Meu Repertório</h2>
+        <ul>
+            <li>Canção 1 - <a href="#">Ouvir</a></li>
+            <li>Canção 2 - <a href="#">Ouvir</a></li>
+            <li>Canção 3 - <a href="#">Ouvir</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const senhaCorreta = "minhasenha123"; // 🔑 Altere para a senha que quiser
+
+        function verificarSenha() {
+            const senha = document.getElementById('senha').value;
+            if (senha === senhaCorreta) {
+                document.getElementById('conteudo').style.display = 'block';
+            } else {
+                alert('Senha incorreta!');
+            }
+        }
+    </script>
+</body>
+</html>
